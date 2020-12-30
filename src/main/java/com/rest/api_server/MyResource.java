@@ -37,7 +37,7 @@ public class MyResource {
     		@FormDataParam("image") InputStream imageStream,
     		@FormDataParam("image") FormDataContentDisposition imageMetaData
     		) throws Exception {
-    	String UPLOAD_PATH = "./";
+    	String UPLOAD_PATH = System.getProperty("user.home") + "/";
     	try {
     		int read = 0;
     		byte[] bytes = new byte[1024];
