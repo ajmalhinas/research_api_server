@@ -52,7 +52,7 @@ public class MyResource {
     		@FormDataParam("image") InputStream imageStream,
     		@FormDataParam("image") FormDataContentDisposition imageMetaData
     		) throws Exception {
-    	// exec start time
+    	// Execution start time
     	long startTime = System.nanoTime();
     	
     	String scannedText = "";
@@ -99,7 +99,7 @@ public class MyResource {
     private String readTextFromImage(File imageFile) throws TesseractException
     {
     	Tesseract tesseract = new Tesseract();
-    	tesseract.setDatapath(System.getProperty("user.home") + "/tessdata/");
+    	tesseract.setDatapath(System.getProperty("user.home") + "/Tesseract_Pretrained_Models/");
     	String detectedText = tesseract.doOCR(imageFile);
     	return detectedText;
     }
